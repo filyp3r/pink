@@ -1,0 +1,7 @@
+--- O QUE É A pink.js
+    A pink.js é uma biblioteca javascript que possibilita criar uma estrutura html sem usar tags, mas sim, funções, facilitando no uso de outros recursos do javascript durante o desenvolvimento do site.
+
+    É também uma alternativa mais fácil para quem já sabe programar mas não tem conhecimento em html. A facilidade vem quando você usa uma das funções do pinkritive.js, e o parametro dos elementos são pegos detro de um array, facilitando no entendimento de que aquele elemento está dentro de um container.
+
+--- OBJETIVO
+    O objetivo da pink.js é, simplesmente, entender como funciona o html de maneira lógica com a utilização da programação, e não da marcação. Mas no final, tudo isso se transforma em html.

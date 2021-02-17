@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink.js - Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="modules/pinkritive.js"></script>
+    <script src="modules/pinkscript.js"></script>
+    <script>
+        div([
+            header(["PINK.JS"], "", false)
+        ], 'id="top-bar"', true);
+
+        div([
+            a([p(["INÍCIO"], '', false)], 'href="#"'),
+            a([p(["BAIXAR"], '', false)], 'href="#"'),
+            a([p(["GITHUB"], '', false)], 'href="#"'),
+        ], 'id="navigation-bar" class=not-fix-on-top', true);
+
+        main([
+            h2(["O QUE É A PINK.JS?"], ''),
+            p([
+                "A pink.js é uma biblioteca javascript desenvolvida em 16 de Fevereiro de 2021 para facilitar o entendimento, a criação da estrutura html, e o uso do javascript durante o desenvolvimento. Foi feita para aqueles que sentem dificudades ao tentar desenvolver uma página em html mas que já tenham conhecimentos em programação, tentando mostrar de maneira lógica, no código, como fica a estrutura, e mostrar também, a partir de seu desenvolvimento dentro de arrays, como cada elemento fica dentro de um container."
+            ], ''),
+
+            h2(["QUAL O OBJETIVO DA PINK.JS?"], ''),
+            p([
+                "Como dito anteriormente, o objetivo é facilitar a contrução da estrutura html para leigos que saibam programar. Mas não é apenas para leigos! O objetivo principal dela é facilitar o uso do javascript durante a construção da estrutura assim como no php, porém não utilizamos as tags html, e sim, funções."
+            ], ''),
+
+            h2(["QUAIS OS REQUISITOS PARA USAR A PINK.JS?"]),
+            p([
+                "Inicialmente, apenas a lógica de programação. Não é nescessário saber javascript, porquê já é disponibilizado no download os arquivos nescessários com informações que te ajudarão."
+            ], ''),
+            
+            h2(["ESTADO ATUAL DO PINK.JS"]),
+            p([
+                "Por enquanto a pink.js ainda está sendo trabalhada, sendo neste caso, tanto a pinkritive.js quanto a pinkscript.js."
+            ], ''),
+        ], '', true);
+    </script>
+
+    <script>
+        var nav_bar = document.getElementById('navigation-bar');
+        var top_bar = document.getElementById('top-bar');
+        window.addEventListener('scroll', function() {
+            if ( scrollY >= nav_bar.offsetTop ) {
+                attrRemove(nav_bar, 'class', 'not-fix-on-top');
+                attrAdd(nav_bar, 'class', 'fix-on-top');
+            }
+            if ( scrollY <= top_bar.offsetTop + top_bar.offsetHeight ) {
+                attrAdd(nav_bar, 'class', 'not-fix-on-top');
+                attrRemove(nav_bar, 'class', 'fix-on-top');
+            }
+        });
+    </script>
+</body>
+</html>

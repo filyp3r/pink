@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+
+    --top-bar-height: 48px;
+    --nav-bar-height: 32px;
+}
+
+
+body {
+    background-color: #101;
+}
+
+
+:focus {
+    outline: none;
+}
+
+
+#top-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--top-bar-height);
+
+    background-color: #101;
+    border-bottom: 1px solid #303;
+    color: #f0f;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+
+#navigation-bar {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-bar-height);
+    background-color: #101;
+    border-bottom: 1px solid #303;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.not-fix-on-top {
+    position: absolute;
+    margin-top: calc(var(--top-bar-height) + 1px);
+}
+.fix-on-top {
+    position: fixed;
+    top: 0;
+}
+
+#navigation-bar a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 96px;
+
+    text-decoration: none;
+    color: #707;
+    font-size: 14pt;
+}
+#navigation-bar a:hover {
+    color: #f0f;
+    background-color: #202;
+}
+#navigation-bar a p { pointer-events: none; }
+
+
+main {
+    --main-local-top-size: calc(var(--top-bar-height) + var(--nav-bar-height) + 2px);
+    min-height: calc(100% - var(--main-local-top-size) - 32px);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: var(--main-local-top-size);
+    padding-bottom: 32px;
+}
+main h2 {
+    font-size: 20pt;
+    text-align: left;
+    padding: 16px;
+    color: #707;
+}
+main p {
+    font-size: 12pt;
+    text-indent: calc(7.2pt * 4);
+    margin: 0 16px 0 16px;
+    color: #f7f;
+}
+
+
+@media (orientation: portrait) {
+    * {
+        --top-bar-height: 64px;
+        --nav-bar-height: 48px;
+    }
+    #navigation-bar a {
+        width: calc(100% / 3);
+    }
+
+}
