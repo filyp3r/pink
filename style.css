@@ -102,6 +102,14 @@ main p {
     margin: 0 16px 0 16px;
     color: #f7f;
 }
+main a {
+    color: #707;
+    text-decoration: none;
+}
+main a:hover {
+    color: #f7f;
+    text-decoration: underline;
+}
 
 
 @media (orientation: portrait) {
@@ -110,7 +118,7 @@ main p {
         --nav-bar-height: 48px;
     }
     #navigation-bar a {
-        width: calc(100% / 3);
+        width: calc(100% / 1);
     }
 
 }
